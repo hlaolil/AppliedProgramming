@@ -1,8 +1,8 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is a project to enhance programming skills by learning and practising a software development modules through creating a usable software based on the C# programming language. This work promotes independent learning through employing the scientific method to aquire and apply new knowlegde. 
 
-{Provide a description of your software}
+The sofware being developed is an inventory management software that...
 
 {Describe your purpose for creating this software.}
 
