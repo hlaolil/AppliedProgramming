@@ -19,4 +19,4 @@ The program is written in C#. I used the .NET SDK to build and run the program f
 # Useful Websites
 
 * [Learning Content](https://byui-cse.github.io/cse310-ww-course/week01/activity_portfolio.html)
-* [Web Site Name](http://url.link.goes.here)
+
