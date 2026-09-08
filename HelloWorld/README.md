@@ -8,7 +8,7 @@ The purpose of this section is to set up the development environment by developi
 
 Here is a one minute demo of the software running and a walkthrough of the code.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.loom.com/share/9b83a50f32104e0287fc964ed455526b)
 
 # Development Environment
 
