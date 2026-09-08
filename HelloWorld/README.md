@@ -1,23 +1,22 @@
 # Overview
 
-This is a project to enhance programming skills by learning and practising a software development modules through creating a usable software based on the C# programming language. This work promotes independent learning through employing the scientific method to aquire and apply new knowlegde. 
+This is a project to enhance programming skills by learning and practicing a software development modules through creating a usable software based on the C# programming language. This work promotes independent learning through employing the scientific method to acquire and apply new knowledge. 
 
-The sofware being developed is an inventory management software that...
+This section of the project is building towards developing an inventory management software. 
 
-{Describe your purpose for creating this software.}
+The purpose of this section is to set up the development environment by developing "Hello World" software.
 
-{Provide a link to your YouTube demonstration.  It should be a one minute demo of the software running and a walkthrough of the code.}
+Here is a one minute demo of the software running and a walkthrough of the code.
 
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+I developed this program on Windows using Visual Studio Code as my editor, with the C# Dev Kit extension.
 
-{Describe the programming language that you used}
+The program is written in C#. I used the .NET SDK to build and run the program from the integrated PowerShell terminal. Version control was handled with Git, and the repository is hosted on GitHub
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
+* [Learning Content](https://byui-cse.github.io/cse310-ww-course/week01/activity_portfolio.html)
 * [Web Site Name](http://url.link.goes.here)
