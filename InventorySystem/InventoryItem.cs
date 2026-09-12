@@ -1,5 +1,3 @@
-using System;
-
 public abstract class InventoryItem
 {
     public int Id { get; set; }
@@ -23,6 +21,11 @@ public abstract class InventoryItem
     public decimal CalculateValue()
     {
         return Quantity * Price;
+    }
+
+    public bool NeedsReorder()
+    {
+        return Quantity <= ReorderLevel;
     }
 
     public abstract string GetItemType();

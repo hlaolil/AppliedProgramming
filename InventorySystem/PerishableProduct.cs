@@ -2,11 +2,26 @@ public class PerishableProduct : InventoryItem
 {
     public DateTime ExpiryDate { get; set; }
 
-    public PerishableProduct(int id, string name, int quantity, decimal price, 
+    public PerishableProduct(int id, string name, int quantity, decimal price,
                              StockLocation location, int reorderLevel, DateTime expiryDate)
         : base(id, name, quantity, price, location, reorderLevel)
     {
         ExpiryDate = expiryDate;
+    }
+
+    public int DaysUntilExpiry()
+    {
+        return (ExpiryDate.Date - DateTime.Now.Date).Days;
+    }
+
+    public bool IsExpired()
+    {
+        return DaysUntilExpiry() < 0;
+    }
+
+    public bool IsExpiringSoon(int days)
+    {
+        return !IsExpired() && DaysUntilExpiry() <= days;
     }
 
     public override string GetItemType()
@@ -14,18 +29,18 @@ public class PerishableProduct : InventoryItem
         return "Perishable";
     }
 
-    public bool IsExpiringSoon(int days)
-    {
-        return ExpiryDate <= DateTime.Now.AddDays(days);
-    }
-
     public override string GetDisplayLine()
     {
-        string line = base.GetDisplayLine() + "  exp:" + ExpiryDate.ToString("yyyy-MM-dd");
+        string line = base.GetDisplayLine()
+                    + "  exp:" + ExpiryDate.ToString("yyyy-MM-dd");
 
-        if (IsExpiringSoon(7))
+        if (IsExpired())
         {
-            line += "  [EXPIRING SOON]";
+            line += "  [EXPIRED]";
+        }
+        else if (IsExpiringSoon(7))
+        {
+            line += "  [" + DaysUntilExpiry() + " DAYS LEFT]";
         }
 
         return line;

@@ -1,5 +1,3 @@
-using System;
-
 public struct StockLocation
 {
     public int Aisle { get; set; }
