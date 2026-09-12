@@ -1,31 +1,29 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+Here I showcase my C# programming skills through an invemtory management software that manages stock levels and expiration. 
 
-{Provide a description of the software that you wrote to demonstrate the C# language.}
+It is a console application that tracks stock items, their quantity, price, shelf location and reorder level. I saves them to a file so the data survives between runs.
 
-{Describe your purpose for writing this software.}
+The purpose of writing this programme was to demonstrate object-oriented programming in C#. The project is a vehicle for understanding classes, abstract classes, inheritance, and the difference between a class and a struct.  What I was really after was the language.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
+Here is a link to the demonstartion video that walks through the code:
 
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+I developed this program on Windows using Visual Studio Code as my editor, with the C# Dev Kit extension.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
+Here is a list of websites that you found helpful in this project
 
-- [Web Site Name](http://url.link.goes.here)
+- [Learning Content](https://byui-cse.github.io/cse310-ww-course/week01/activity_portfolio.html)
 - [Web Site Name](http://url.link.goes.here)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
+Here is a list of things that I need to fix, improve, and add in the future.
 
 - Item 1
 - Item 2
