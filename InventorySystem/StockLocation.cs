@@ -9,12 +9,14 @@ public struct StockLocation
         Shelf = shelf;
     }
 
-    public string Describe()
+    public string Describe() // Builds a readable label, for example
     {
         return "A" + Aisle + "-S" + Shelf;
     }
 
-    public override string ToString()
+    public override string ToString() //Replace the built-in ToString method with our own.
+    // Without this, printing a StockLocation would show the type name instead of something useful.
+
     {
         return Describe();
     }

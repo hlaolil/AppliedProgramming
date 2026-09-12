@@ -1,11 +1,13 @@
 using System.Globalization;
-
-public static class InventoryFile
+// This class handles saving and loading the inventory to and from a text file.
+public static class InventoryFile //A static class is a class that cannot be instantiated. 
+//It is used to group related methods together.
 {
     private const char Separator = '|';
     private const int FieldCount = 9;
 
-    public static void Save(List<InventoryItem> items, string path)
+    public static void Save(List<InventoryItem> items, string path) //Saves the given list of 
+    //items to the given file path, overwriting any existing file.
     {
         try
         {
@@ -23,7 +25,8 @@ public static class InventoryFile
         }
     }
 
-    public static List<InventoryItem> Load(string path)
+    public static List<InventoryItem> Load(string path) //Loads a list of items from the given 
+    //file path, replacing any existing items.
     {
         List<InventoryItem> items = new List<InventoryItem>();
 
@@ -66,7 +69,8 @@ public static class InventoryFile
         return items;
     }
 
-    private static string BuildLine(InventoryItem item)
+    private static string BuildLine(InventoryItem item) //Builds a line of text to represent the 
+    //given item, using the separator character to separate fields.
     {
         string common = string.Join(Separator.ToString(),
             item.Id, item.Name, item.Quantity,
@@ -84,7 +88,8 @@ public static class InventoryFile
         return "S" + Separator + common + Separator + product.Category;
     }
 
-    private static InventoryItem? ParseLine(string line)
+    private static InventoryItem? ParseLine(string line) //Parses a line of text to create an 
+    //InventoryItem object. Returns null if the line is invalid.
     {
         string[] parts = line.Split(Separator);
 

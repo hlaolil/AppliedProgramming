@@ -25,6 +25,6 @@ Here is a list of websites that you found helpful in this project
 
 Here is a list of things that I need to fix, improve, and add in the future.
 
-- Item 1
+- Move from jsut console to a graphical interface
 - Item 2
 - Item 3

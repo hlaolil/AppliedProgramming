@@ -1,4 +1,5 @@
-public class PerishableProduct : InventoryItem
+//For items that goes off - milk, medicine, food.
+public class PerishableProduct : InventoryItem /// Inherits from InventoryItem
 {
     public DateTime ExpiryDate { get; set; }
 

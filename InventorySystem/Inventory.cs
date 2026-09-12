@@ -1,23 +1,24 @@
-public class Inventory
+public class Inventory // Represents a collection of inventory items, 
+// //and provides methods to manipulate them.
 {
-    private List<InventoryItem> items;
+    private List<InventoryItem> items;// The list of items in the inventory.
 
-    public Inventory()
+    public Inventory() //Creates a new, empty inventory.
     {
         items = new List<InventoryItem>();
     }
 
-    public int Count
+    public int Count //Returns the number of items in the inventory.
     {
         get { return items.Count; }
     }
 
-    public void AddItem(InventoryItem item)
+    public void AddItem(InventoryItem item) //Adds an item to the inventory. The item can be any subclass of InventoryItem.
     {
         items.Add(item);
     }
 
-    public InventoryItem? FindById(int id)
+    public InventoryItem? FindById(int id) //Searches for an item by its ID. Returns the item if found, or null if not found.
     {
         foreach (InventoryItem item in items)
         {
@@ -30,7 +31,8 @@ public class Inventory
         return null;
     }
 
-    public bool RemoveItem(int id)
+    public bool RemoveItem(int id) //Removes an item from the inventory by its ID. 
+    //Returns true if the item was found and removed, or false if not found.
     {
         InventoryItem? found = FindById(id);
 
@@ -43,7 +45,7 @@ public class Inventory
         return true;
     }
 
-    public bool UpdateQuantity(int id, int newQuantity)
+    public bool UpdateQuantity(int id, int newQuantity) //Updates the quantity of an item by its ID.
     {
         InventoryItem? found = FindById(id);
 
@@ -56,7 +58,8 @@ public class Inventory
         return true;
     }
 
-    public List<InventoryItem> Search(string? term)
+    public List<InventoryItem> Search(string? term) //Searches for items whose names contain the 
+    //given term (case-insensitive).
     {
         List<InventoryItem> results = new List<InventoryItem>();
 
@@ -78,7 +81,7 @@ public class Inventory
         return results;
     }
 
-    public decimal GetTotalValue()
+    public decimal GetTotalValue() //Calculates the total value of all items in the inventory,
     {
         decimal total = 0;
 
@@ -90,7 +93,7 @@ public class Inventory
         return total;
     }
 
-    public void DisplayAll()
+    public void DisplayAll() //Prints a list of all items in the inventory, using each item's own display format.
     {
         if (items.Count == 0)
         {
@@ -104,7 +107,8 @@ public class Inventory
         }
     }
 
-    public void DisplayLowStock()
+    public void DisplayLowStock() //Prints a list of all items that are at or below their 
+    //reorder level, using each item's own display format.
     {
         bool anyFound = false;
 
@@ -123,17 +127,18 @@ public class Inventory
         }
     }
 
-    public void LoadFrom(string path)
+    public void LoadFrom(string path) //Loads the inventory from a file, replacing any existing 
+    //items.
     {
         items = InventoryFile.Load(path);
     }
 
-    public void SaveTo(string path)
+    public void SaveTo(string path) //Saves the inventory to a file, overwriting any existing file.
     {
         InventoryFile.Save(items, path);
     }
 
-    public void DisplayExpiring(int days)
+    public void DisplayExpiring(int days) //Prints a list of all perishable items that are expired or expiring within the given number of days.
     {
         bool anyFound = false;
 
