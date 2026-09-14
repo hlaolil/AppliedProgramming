@@ -1,4 +1,5 @@
-public struct StockLocation
+public struct StockLocation // Represents the location of an item in the warehouse, 
+// //using aisle and shelf numbers.  
 {
     public int Aisle { get; set; }
     public int Shelf { get; set; }
