@@ -19,12 +19,10 @@ I developed this program on Windows using Visual Studio Code as my editor, with 
 Here is a list of websites that you found helpful in this project
 
 - [Learning Content](https://byui-cse.github.io/cse310-ww-course/week01/activity_portfolio.html)
-- [Web Site Name](http://url.link.goes.here)
 
 # Future Work
 
 Here is a list of things that I need to fix, improve, and add in the future.
 
-- Move from jsut console to a graphical interface
-- Item 2
-- Item 3
+- Move from just console to a graphical interface
+
